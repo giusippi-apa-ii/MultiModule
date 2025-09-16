@@ -1,17 +1,21 @@
 package com.exist.app;
 
+import com.exist.service.TableService;
+import com.exist.service.impl.TableServiceImpl;
 import com.exist.service.FileService;
 import com.exist.service.impl.FileServiceImpl;
+import com.exist.utilities.ScanUtils;
 
-public final class AdvancedJava {
 
-    public static void main(String[] args) {
-/*
+import java.io.IOException;
+
+public class MenuApplication {
+
+    public void start(String[] args) {
         try {
 
             FileService fileService = new FileServiceImpl();
             String fileName = (args.length == 0) ? FileService.DEFAULT_RESOURCE : fileService.getFileName(args);
-            System.out.println("File Name: " + fileName);
 
             MenuManager menu = new MenuManager();
             menu.startApplication(fileName);
@@ -20,10 +24,5 @@ public final class AdvancedJava {
         } catch (Exception e) {
             System.err.println("System Error: " + e.getMessage());
         }
-*/
-        MenuApplication mainApp = new MenuApplication();
-        
-        mainApp.start(args);
-
     }
 }
