@@ -10,6 +10,7 @@ public final class AdvancedJava {
 
             FileService fileService = new FileServiceImpl();
             String fileName = (args.length == 0) ? FileService.DEFAULT_RESOURCE : fileService.getFileName(args);
+            System.out.println("File Name: " + fileName);
 
             MenuManager menu = new MenuManager();
             menu.startApplication(fileName);
