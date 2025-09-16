@@ -22,7 +22,7 @@ public final class AdvancedJava {
         }
 */
         MenuApplication mainApp = new MenuApplication();
-        
+        System.out.println("Change 1");
         mainApp.start(args);
 
     }
